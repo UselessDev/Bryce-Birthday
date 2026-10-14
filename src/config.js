@@ -4,7 +4,7 @@ import photo2 from "./assets/2.1.jpg";
 import photo3 from "./assets/bini.jpg";
 import photo4 from "./assets/b1.jpg";
 import photo5 from "./assets/b2.jpg";
-import song from "./assets/bgm/birthday-song.mp3";
+import song from "./assets/bgm/birthday-songs.mp3";
 
 
 // ================= EDIT THESE =================
