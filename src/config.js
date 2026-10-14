@@ -4,6 +4,7 @@ import photo2 from "./assets/2.1.jpg";
 import photo3 from "./assets/bini.jpg";
 import photo4 from "./assets/b1.jpg";
 import photo5 from "./assets/b2.jpg";
+import song from "./assets/bgm/birthday-song.mp3";
 
 
 // ================= EDIT THESE =================
@@ -30,6 +31,11 @@ export const MESSAGE = [
   "I hope this year brings you everything you've been working for, and even more that you haven't dared to ask for yet.",
 ];
 export const SIGNATURE = "With gratitude, your friend";
+
+// Background music (starts when they visit the site, then loops).
+// Paste a YouTube link, a direct .mp3/.ogg URL, or put a file in public/ and use "/song.mp3".
+// You can also import it:  import song from "./assets/song.mp3";  then  export const BGM = song;
+export const BGM = song;
 // ==============================================
 
 // ===== Last section: the gift =====

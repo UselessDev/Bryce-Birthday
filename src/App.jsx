@@ -1,8 +1,9 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { NAME, HERO_IMG, PHOTOS, MESSAGE, SIGNATURE, GIFT_IMG, GIFT_CAP } from "./config";
+import { NAME, HERO_IMG, PHOTOS, MESSAGE, SIGNATURE, GIFT_IMG, GIFT_CAP, BGM } from "./config";
 import useConfetti from "./hooks/useConfetti";
 import useReveal from "./hooks/useReveal";
 import Gate from "./components/Gate";
+import Bgm from "./components/Bgm";
 import Hero from "./components/Hero";
 import Postcard from "./components/Postcard";
 import Gallery from "./components/Gallery";
@@ -13,12 +14,11 @@ export default function App() {
   const [opened, setOpened] = useState(false);
   const rootRef = useRef(null);
   const { canvasRef, burst, rain } = useConfetti();
-  const friendName = "Bluewyn Bryce Ermac"
 
   const name = useMemo(() => new URLSearchParams(window.location.search).get("name") || NAME, []);
 
   useEffect(() => {
-    document.title = `Happy Birthday` + friendName + `🎉`;
+    document.title = `Happy Birthday ${name} 🎉`;
   }, [name]);
 
   useReveal(rootRef, burst);
@@ -39,6 +39,7 @@ export default function App() {
       <div className="bd-bg" />
       <canvas className="bd-fx" ref={canvasRef} />
 
+      <Bgm src={BGM} />
       <Gate opened={opened} onOpen={open} />
       <Hero opened={opened} name={name} image={HERO_IMG} onTap={(x, y) => burst(40, x, y)} />
 

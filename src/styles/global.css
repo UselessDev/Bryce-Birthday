@@ -11,6 +11,8 @@
 .bd-rv{opacity:0;transform:translateY(50px);transition:opacity 1s,transform 1s}
 .bd-rv.in{opacity:1;transform:none}
 .bd-foot{position:relative;z-index:1;padding:3rem 1rem;color:var(--muted);text-align:center;font-size:.9rem}
+.bd-yt{position:fixed;width:1px;height:1px;opacity:0;pointer-events:none;border:0}
+.bd-mute{position:fixed;z-index:60;right:1rem;bottom:1rem;width:2.8rem;height:2.8rem;border:0;border-radius:50%;cursor:pointer;font-size:1.15rem;background:rgba(42,18,69,.8);color:var(--text);box-shadow:0 0 18px rgba(255,111,181,.35);backdrop-filter:blur(8px)}
 @media(prefers-reduced-motion:reduce){.bd *{animation:none!important;transition:none!important}.bd-pop>*,.bd-rv,.bd-pol{opacity:1;transform:none}.bd-heroimg{opacity:1}}
 html{scroll-behavior:smooth}
 body{margin:0;background:#120a24}
