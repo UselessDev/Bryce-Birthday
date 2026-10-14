@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600&family=Caveat:wght@500;700&display=swap");
+.bd{--bg:#120a24;--bg2:#2a1245;--pink:#ff6fb5;--gold:#ffd36e;--cyan:#6fe7ff;--text:#fdf6ff;--muted:#cdb8e6;
+  background:var(--bg);color:var(--text);font-family:Poppins,system-ui,sans-serif;overflow-x:hidden;min-height:100vh;position:relative}
+.bd *{box-sizing:border-box;margin:0}
+.bd-fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:50}
+.bd-bg{position:fixed;inset:0;z-index:0;background:radial-gradient(circle at 20% 20%,#4b1d7a 0,transparent 45%),radial-gradient(circle at 80% 80%,#7a1d5e 0,transparent 45%),linear-gradient(160deg,var(--bg),var(--bg2));animation:bd-hue 14s ease-in-out infinite alternate}
+@keyframes bd-hue{to{filter:hue-rotate(40deg)}}
+.bd section{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4rem 1.5rem;text-align:center;position:relative;z-index:1}
+@keyframes bd-bob{50%{transform:translateY(-14px) rotate(-6deg)}}
+@keyframes bd-pulse{50%{opacity:.4}}
+.bd-rv{opacity:0;transform:translateY(50px);transition:opacity 1s,transform 1s}
+.bd-rv.in{opacity:1;transform:none}
+.bd-foot{position:relative;z-index:1;padding:3rem 1rem;color:var(--muted);text-align:center;font-size:.9rem}
+@media(prefers-reduced-motion:reduce){.bd *{animation:none!important;transition:none!important}.bd-pop>*,.bd-rv,.bd-pol{opacity:1;transform:none}.bd-heroimg{opacity:1}}
+html{scroll-behavior:smooth}
+body{margin:0;background:#120a24}

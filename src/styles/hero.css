@@ -1,0 +1,17 @@
+#bd-hero{overflow:hidden}
+.bd-herobg{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,#000 50%,transparent 100%);mask-image:linear-gradient(to bottom,#000 50%,transparent 100%)}
+.bd-heroimg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.6) saturate(1.1);opacity:0;transition:opacity 1.6s .3s}
+.show .bd-heroimg{opacity:1}
+.bd-hb{font-family:"Playfair Display",serif;font-weight:700;font-size:clamp(1.4rem,5vw,2.4rem);color:var(--gold);letter-spacing:.15em;text-transform:uppercase}
+.bd-name{font-family:"Playfair Display",serif;font-weight:900;font-size:clamp(3rem,13vw,9rem);line-height:1.05;margin:.5rem 0;background:linear-gradient(90deg,var(--pink),var(--gold),var(--cyan),var(--pink));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:bd-shine 6s linear infinite}
+@keyframes bd-shine{to{background-position:300% 0}}
+.bd-sub{color:var(--muted);font-weight:300;font-size:clamp(1rem,3vw,1.3rem)}
+.bd-pop{position:relative;z-index:1}
+.bd-pop>*{opacity:0;transform:translateY(40px) scale(.9)}
+.show .bd-pop>*{animation:bd-in 1s cubic-bezier(.2,.9,.3,1.2) forwards}
+.show .bd-pop>*:nth-child(2){animation-delay:.25s}
+.show .bd-pop>*:nth-child(3){animation-delay:.5s}
+@keyframes bd-in{to{opacity:1;transform:none}}
+.bd-scroll{position:absolute;z-index:1;bottom:1.5rem;color:var(--muted);font-size:.8rem;letter-spacing:.2em;animation:bd-bob 2s infinite}
+.bd-balloon{position:absolute;z-index:1;bottom:-120px;font-size:3rem;animation:bd-float linear infinite;opacity:.8;pointer-events:none}
+@keyframes bd-float{to{transform:translateY(-120vh) rotate(20deg)}}
